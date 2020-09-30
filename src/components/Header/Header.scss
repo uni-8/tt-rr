@@ -1,0 +1,15 @@
+.Header {
+  height: 14vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  background-color: white;
+  margin-bottom: 2vh;
+  padding: 0 5vw;
+
+  &__logo {
+    height: 4.6vh;
+    width: 15.3vh;
+  }
+}
