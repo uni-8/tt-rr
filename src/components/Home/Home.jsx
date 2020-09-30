@@ -19,7 +19,9 @@ export const Home = () => {
         </p>
       </section>
 
-      <Calendar />
+      <section className="Home__calendar">
+        <Calendar />
+      </section>
     </main>
   )
 }
