@@ -1,5 +1,87 @@
+$box_size: 2.7vw;
+$box_margin: 0.8vw;
+$calculate: calc(#{$box_size} + #{$box_margin});
+$color_br: rgba(255, 255, 255, 0.43);
+$mainColor: #dfdfdf;
+
+@mixin calendar_width($i) {
+  width: calc(#{$i} * #{$calculate});
+}
+
 .Calendar {
-  height: 100%;
-  width: 35.6vw;
+  @include calendar_width(7);
+
+  margin: 17.5vh 4.7vw 0 0;
   background-color: #272829;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $color_br;
+    padding-bottom: 1vh;
+    margin-bottom: 1vh;
+    width: calc((2.7vw + 0.8vw) * 7 - 2.2vw);
+  }
+
+  &__change-month-button {
+    border: none;
+    padding: 0;
+    background: none;
+    color: $mainColor;
+    opacity: 0.67;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 1vw;
+    text-transform: uppercase;
+    color: $mainColor;
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.7vw;
+  }
+
+  &__day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $box_size;
+    width: $box_size;
+    margin-top: $box_margin;
+    margin-right: $box_margin;
+    font-size: 0.9vw;
+    font-weight: 500;
+    color: $mainColor;
+
+    &--disabled {
+      opacity: 0.24;
+    }
+
+    &--active {
+      background: #fdd000;
+      color: #3d3d3d;
+    }
+  }
+
+  &__daysNames {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc((2.7vw + 0.8vw) * 7 - 2.2vw);
+    margin-top: 1vh;
+    border-top: 1px solid $color_br;
+    border-bottom: 1px solid $color_br;
+    font-size: 1vw;
+    height: $box_size;
+    color: #fff;
+  }
+
+  &__dayName {
+    width: 1.2vw;
+  }
 }

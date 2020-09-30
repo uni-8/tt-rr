@@ -8,7 +8,7 @@
   background-size: cover;
 
   &__greeting {
-    margin: 19.3vh 1.7vw 0 0;
+    margin: 13.3vh 1.7vw 0 0;
     text-align: right;
   }
 
@@ -29,5 +29,14 @@
     line-height: 3.7vh;
     letter-spacing: 0.6px;
     color: #dfdfdf;
+  }
+
+  &__calendar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 100%;
+    width: 35.6vw;
+    background-color: #272829;
   }
 }
