@@ -1,0 +1,19 @@
+.About {
+  padding: 1.8vh 15vw 0;
+  text-align: left;
+  color: #3d3d3d;
+
+  &__title {
+    font-weight: 700;
+    font-size: 3vh;
+    line-height: 9.6vh;
+    letter-spacing: -0.68px;
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: 1.9vh;
+    line-height: 3.3vh;
+    letter-spacing: 0.4px;
+  }
+}
